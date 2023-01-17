@@ -53,7 +53,7 @@ while loop:
         else:
             Drawer.draw_schedule(number_total_machines, 1, temp_jobs_list, filename="output_genetic.png")
         del s
-    elif choice == "5":
+    elif choice == "2":
         loop = False
     else:
         input("Wrong option selection. Enter any key to try again...")
