@@ -51,7 +51,7 @@ while loop:
         if draw == "n" or draw == "N":
             continue
         else:
-            Drawer.draw_schedule(number_total_machines, 1, temp_jobs_list, filename="output_genetic.png")
+            Drawer.draw_schedule(number_total_machines, 2, temp_jobs_list, filename="output_genetic.png")
         del s
     elif choice == "2":
         loop = False

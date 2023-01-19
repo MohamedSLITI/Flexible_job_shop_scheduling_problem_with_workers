@@ -130,7 +130,7 @@ class GeneticScheduler:
     # Permute an individual
     # In our case it means select an activity and permute it with another
     # It needs to meet some constraint to be efficient:
-    #	You can't move an activity before or after another one from the same job
+    # You can't move an activity before or after another one from the same job
     @staticmethod
     def compute_bounds(permutation, considered_index):
         considered_activity, _ = permutation[considered_index]
@@ -230,7 +230,7 @@ class GeneticScheduler:
         if not verbose:
             sys.stdout = None
 
-        creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
+        creator.create("FitnessMin", base.Fitness, weights=(-1.0,))  # mesure the quality of the sol
         creator.create("Individual", list, fitness=creator.FitnessMin)
 
         self.__toolbox.register("individual", self.init_individual, creator.Individual, size=1)
